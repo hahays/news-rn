@@ -2,17 +2,12 @@ import React from 'react';
 import {
   NavigationContainer,
   DefaultTheme,
-  Theme,
+  type Theme,
 } from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NewsListScreen} from '../screens/NewsListScreen';
 import {NewsDetailScreen} from '../screens/NewsDetailScreen';
-import type {Article} from '../types/news';
-
-export type RootStackParamList = {
-  NewsList: undefined;
-  NewsDetail: {article: Article};
-};
+import type {RootStackParamList} from './types';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 const navTheme: Theme = {
